@@ -1,14 +1,17 @@
 .row {
-   width: 48px;
-   height: 48px;
-   border: 1px solid black;   
+   display: flex;
+   flex-direction: column;
+   flex: 1;   
+}
+
+.column {
+    border: 1px solid black;
+    flex: 1;
 }
 
 .grid {
     display: flex;
-    flex-wrap: wrap;
     border: 1px solid black;
     width: 800px;
     height: 800px;
 }
-
