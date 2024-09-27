@@ -1,6 +1,15 @@
 const grid = document.querySelector("div");
 const btn = document.querySelector("button");
 
+function getRandomColor () {
+    let letters = "0123456789abcdef";
+    let hex = "#";
+    for (let i = 0; i < 6; i++) {
+        hex += letters[Math.floor(Math.random() * 16)]
+    }
+    return hex;
+}
+
 function createGrid () {
         let num = prompt('How many squares per side? Enter a number from 1 to 100');
         while (!(num > 0 && num <= 100)) {
@@ -16,8 +25,8 @@ function createGrid () {
                 row.appendChild(column);
                 column.className = "column";
                 column.addEventListener('mouseenter', () => {
-                    column.style.backgroundColor = 'black'
-                  });  
+                    column.style.backgroundColor = `${getRandomColor()}`
+                });
             }        
     }             
 }
