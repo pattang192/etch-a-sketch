@@ -24,7 +24,11 @@ function createGrid () {
                 const column = document.createElement("div");
                 row.appendChild(column);
                 column.className = "column";
+                //let opacity = 0;
                 column.addEventListener('mouseenter', () => {
+                    //column.style.backgroundColor = "black";
+                    //opacity += 0.1;
+                    //column.style.opacity = opacity;
                     column.style.backgroundColor = `${getRandomColor()}`
                 });
             }        
